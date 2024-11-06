@@ -1,0 +1,24 @@
+/* styles.css */
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --text-color-nav-li: #fff;
+    --link-color: #007bff;
+    --header-background-image: url('../images/Tariq.png');
+    --logo-image: url('../images/logo-Light.png');
+    --service-card-background: #f1f1f1;
+    --btn-background-color: transparent;
+    --btn-text-color: #333;
+}
+
+.light-mode {
+    --background-color: #333;
+    --text-color-nav-li: #fff;
+    --text-color: #f9f9f9;
+    --link-color: #1e90ff;
+    --header-background-image: url('../images/Tariq.png');
+    --logo-image: url('../images/logo-dark.png');
+    --service-card-background: #555;
+    --btn-background-color: #1e90ff;
+    --btn-text-color: #fff;
+}

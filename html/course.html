@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Courses</title>
+        <link rel="stylesheet" href="../css/course.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- <style>
+            @import url(../css/course.css);
+            @import url(../css/sidemenu.css);
+        </style> -->
+
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="logo">
+                <img src="../images/logo-light.png" alt="Logo">
+            </div>
+            <ul id="sidemenu">
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Coding Interviews</a></li>
+                <li><a href="#">Podcast</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="course-desc-container">
+            <div class="title-container">
+                <h2 id="courseTitle"></h2>
+            </div>
+            <div class="details-container">
+                <div>
+                    <p>الفئة المستهدفة</p>
+                    <hr>
+                    <h3 id="course_targetAudience"></h3>
+                </div>
+                <div>
+                    <p>الوقت الكلي</p>
+                    <hr>
+                    <h3 id="course_courseLength"></h3>
+                </div>
+                <div>
+                    <p>عدد الفيديوهات</p>
+                    <hr>
+                    <h3 id="course_numberOfLectures"></h3>
+                </div>
+                <div>
+                    <p>المتطلبات</p>
+                    <hr>
+                    <h3 id="course_requirements"></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-container">
+            <div class="course-playlist">
+                <h2>Course Playlist</h2>
+                <div id="playlist">
+                    <!-- Playlist will be populated dynamically using JavaScript -->
+                </div>
+            </div>
+
+            <div class="course-video">
+                <h3 id="courseName"></h3>
+                <iframe id="videoPlayer" width="800" height="450" src="https://www.youtube.com/embed/2EAV2cB3FWY"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="course-desc-container">
+                    <h2 id="videoTitle">المقدمة</h2>
+                    <div class="course-info">
+                        <p id="videoDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Course Platform. Built with by &#128151; Gazans from Gaza.</p>
+        </footer>
+
+        <script src="../js/courseScript.js"></script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu() {
+                sidemenu.style.right = "0px";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-250px";
+            }
+
+        </script>
+    </body>
+
+
+</html>

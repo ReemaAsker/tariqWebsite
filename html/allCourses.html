@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tariq Elouzeh's Website</title>
+        <!-- <link rel="stylesheet" href="../css/allCourses.css"> -->
+        <style>
+            @import url(../css/allCourses.css);
+            @import url(../css/sidemenu.css);
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo-light.png" alt="Logo">
+            </div>
+
+            <!-- <img class="logo" src="images/logo-Light.png" alt=""> -->
+            <ul id="sidemenu">
+                <hr>
+
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="allCourses.html">Courses</a></li>
+                <li><a href="#">Coding Interviews</a></li>
+                <li><a href="#">Podcast</a></li>
+
+
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+
+        <div class="container">
+
+
+            <!-- Portfolio -->
+            <div id="portfolio">
+                <div class="container">
+                    <h1 class="sub-tittle-about">My Courses</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="../images/js-course.jpg">
+
+                            <div class="layer">
+                                <h3>Essentials Js Course </h3>
+                                <p>JavaScript is a basic language in the world of web and website development and
+                                    one of the
+                                    few languages ​​that is sufficient to develop a complete web program from
+                                    scratch
+                                    without the need to use other programming languages.</p>
+                                <!-- https://www.udemy.com/course/javascript-essentials-arabic/?couponCode=OF83024D#instructor-1 -->
+                                <a href="course.html?showCourse=js">Go
+                                    to course</a>
+                            </div>
+
+                        </div>
+                        <div class="work">
+                            <img src="../images/react-course.jpeg">
+                            <div class="layer">
+                                <h3>React Native Course </h3>
+                                <p>java script is the basic programming language we will use through it :
+                                    React JS,Redux,Node JS,Express JS,MongoDB,MongoDB Atlas,GitHub Pages and
+                                    Cyclic,Postman,Asynchronous Programming,HTML,CSS</p>
+
+                                <a href="course.html?showCourse=react">Go to course</a>
+
+                            </div>
+                        </div>
+
+                        <div class="work">
+                            <img src="../images/nodejs-course.png">
+
+                            <div class="layer">
+                                <h3>Node Js Course </h3>
+                                <p>java script is the basic programming language we will use through it :
+                                    React JS,Redux,Node JS,Express JS,MongoDB,MongoDB Atlas,GitHub Pages and
+                                    Cyclic,Postman,Asynchronous Programming,HTML,CSS</p>
+
+                                <div class="course-link">
+                                    <a href="https://www.udemy.com/course/javascript-essentials-arabic/?couponCode=OF83024D#instructor-1"
+                                        target="_blank">
+                                        <a href="course.html?showCourse=nodejs">Go to course</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <script>
+                    var sidemenu = document.getElementById("sidemenu");
+                    function openmenu() {
+                        sidemenu.style.right = "0px";
+                    }
+                    function closemenu() {
+                        sidemenu.style.right = "-200px";
+                    }
+
+                </script>
+
+
+    </body>
+
+</html>
