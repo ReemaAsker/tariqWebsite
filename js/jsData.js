@@ -4,6 +4,8 @@ var jsCourseDes = [
         title: 'أساسيات جافا سكريبت', targetAudience: "المبتدئين إلى المتعلمين المتوسطين", courseLength: " 6hr 30min",
         numberOfLectures: 34,
         requirements: "فهم أساسي لمفاهيم البرمجة",
+        logo: "../images/js.gif"
+
     },
 ]
 var allSections = [

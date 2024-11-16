@@ -5,105 +5,84 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tariq Elouzeh's Website</title>
-        <!-- <link rel="stylesheet" href="../css/allCourses.css"> -->
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+
         <style>
             @import url(../css/allCourses.css);
             @import url(../css/sidemenu.css);
+            @import url(../css/footer.css);
         </style>
     </head>
 
     <body>
-        <nav>
-            <div class="logo">
-                <img src="../images/logo-light.png" alt="Logo">
+
+        <script src="../js/sidemenu.js"></script>
+        <!-- HTML structure -->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-tittle-about">My Courses</h1>
+                <div id="work-list" class="work-list"></div>
             </div>
+        </div>
+        <script src="../js/courses.js"></script>
 
-            <!-- <img class="logo" src="images/logo-Light.png" alt=""> -->
-            <ul id="sidemenu">
-                <hr>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                allCourses();
+            });
+        </script>
 
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        <script src="../js/footer.js"></script>
+        </div>
+        </div>
 
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="allCourses.html">Courses</a></li>
-                <li><a href="#">Coding Interviews</a></li>
-                <li><a href="#">Podcast</a></li>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu() {
+                sidemenu.style.right = "0px";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-500px";
+            }
+        </script>
+        <script>
+            window.addEventListener("scroll", function () {
+                var sidemenu = document.getElementById("sidemenu");
+                var sidemenuTop = sidemenu.offsetTop; // Get the initial top position of the sidemenu
+                var screenWidth = window.innerWidth; // Get the window width
 
+                // Calculate the horizontal center position
+                var sidemenuWidth = sidemenu.offsetWidth;
+                var centerPosition = (screenWidth - sidemenuWidth) / 2;
 
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
+                if (window.pageYOffset >= sidemenuTop) {
+                    sidemenu.classList.add("fixed"); // Add fixed class when scrolling down
+                    sidemenu.classList.remove("absolute"); // Remove absolute class
 
+                    // Position the sidemenu as fixed and horizontally centered
+                    sidemenu.style.position = "fixed";
+                    sidemenu.style.top = "0"; // Set the top position
+                    // sidemenu.style.left = `${centerPosition}px`; // Center horizontally
+                } else {
+                    // sidemenu.classList.add("absolute"); // Add absolute class when returning to top
+                    sidemenu.classList.remove("fixed"); // Remove fixed class
 
-        <div class="container">
+                    // // Reset positioning for sidemenu when at the top
+                    // sidemenu.style.position = "absolute";
+                    // sidemenu.style.top = ""; // Reset to default
+                    // sidemenu.style.left = ""; // Reset to default
+                }
+            });
 
-
-            <!-- Portfolio -->
-            <div id="portfolio">
-                <div class="container">
-                    <h1 class="sub-tittle-about">My Courses</h1>
-                    <div class="work-list">
-                        <div class="work">
-                            <img src="../images/js-course.jpg">
-
-                            <div class="layer">
-                                <h3>Essentials Js Course </h3>
-                                <p>JavaScript is a basic language in the world of web and website development and
-                                    one of the
-                                    few languages ​​that is sufficient to develop a complete web program from
-                                    scratch
-                                    without the need to use other programming languages.</p>
-                                <!-- https://www.udemy.com/course/javascript-essentials-arabic/?couponCode=OF83024D#instructor-1 -->
-                                <a href="course.html?showCourse=js">Go
-                                    to course</a>
-                            </div>
-
-                        </div>
-                        <div class="work">
-                            <img src="../images/react-course.jpeg">
-                            <div class="layer">
-                                <h3>React Native Course </h3>
-                                <p>java script is the basic programming language we will use through it :
-                                    React JS,Redux,Node JS,Express JS,MongoDB,MongoDB Atlas,GitHub Pages and
-                                    Cyclic,Postman,Asynchronous Programming,HTML,CSS</p>
-
-                                <a href="course.html?showCourse=react">Go to course</a>
-
-                            </div>
-                        </div>
-
-                        <div class="work">
-                            <img src="../images/nodejs-course.png">
-
-                            <div class="layer">
-                                <h3>Node Js Course </h3>
-                                <p>java script is the basic programming language we will use through it :
-                                    React JS,Redux,Node JS,Express JS,MongoDB,MongoDB Atlas,GitHub Pages and
-                                    Cyclic,Postman,Asynchronous Programming,HTML,CSS</p>
-
-                                <div class="course-link">
-                                    <a href="https://www.udemy.com/course/javascript-essentials-arabic/?couponCode=OF83024D#instructor-1"
-                                        target="_blank">
-                                        <a href="course.html?showCourse=nodejs">Go to course</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <script>
-                    var sidemenu = document.getElementById("sidemenu");
-                    function openmenu() {
-                        sidemenu.style.right = "0px";
-                    }
-                    function closemenu() {
-                        sidemenu.style.right = "-200px";
-                    }
-
-                </script>
-
+            // // Update the horizontal center position on window resize
+            // window.addEventListener("resize", function () {
+            // var sidemenu = document.getElementById("sidemenu");
+            // var screenWidth = window.innerWidth;
+            // var sidemenuWidth = sidemenu.offsetWidth;
+            // sidemenu.style.left = `${(screenWidth - sidemenuWidth) / 2}px`;
+            // });
+        </script>
 
     </body>
 

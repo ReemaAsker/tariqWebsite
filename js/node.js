@@ -5,6 +5,8 @@ var jsCourseDes = [
         , courseLength: "6hr 30min",
         numberOfLectures: 57,
         requirements: "معرفة مبدأية بالجافاسكريبت ستضمن نجاحكم بالدورة",
+        logo: "../images/node.gif"
+
     },
 ]
 var allSections = [

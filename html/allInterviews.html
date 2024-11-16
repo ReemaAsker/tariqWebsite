@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Courses</title>
+        <!-- <link rel="stylesheet" href="../css/course.css"> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+        <style>
+            @import url(../css/interviews.css);
+            @import url(../css/course.css);
+            @import url(../css/sidemenu.css);
+            @import url(../css/footer.css);
+        </style>
+
+    </head>
+
+    <body>
+        <script src="../js/sidemenu.js"></script>
+
+
+
+
+        <div class="course-container">
+            <div class="course-playlist">
+                <h2>Interviews Playlist</h2>
+                <div id="playlist">
+                    <!-- Playlist will be populated dynamically using JavaScript -->
+                </div>
+            </div>
+
+            <div class="course-video">
+                <h3 id="courseName"></h3>
+                <iframe id="videoPlayer" width="800" height="450" src="https://www.youtube.com/embed/2EAV2cB3FWY"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="course-desc-container">
+                    <h2 id="videoTitle">المقدمة</h2>
+                    <div class="course-info">
+                        <p id="videoDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/footer.js"></script>
+
+        <p> 2024 @Tariq Elouzeh </p>
+
+        <script src="../js/courseScript.js"></script>
+        <script>
+            // Video playlist data
+            const videos = [
+                {
+                    title: "  شركات التكنولوجيا (مع مصطفى من مصر)",
+                    link: "https://www.youtube.com/embed/k1v5oF8AeLE",
+                },
+                {
+                    title: "Palindrome   | مع الياس من لبنان",
+                    link: "https://www.youtube.com/embed/XAKmmBK3Ttc",
+                },
+                {
+                    title: "  مع عبدالرحمن من فلسطين | APIs",
+                    link: "https://www.youtube.com/embed/frshwrtUFzo",
+                },
+                {
+                    title: " مع فراس من سوريا | Basic Chat App ",
+                    link: "https://www.youtube.com/embed/AkdHO1iBiTw",
+                },
+                {
+                    title: "   مع سندس من الأردن | Foreign language sorting",
+                    link: "https://www.youtube.com/embed/2rhTBIXhY6s",
+                },
+                {
+                    title: "   النسخة المدرسية | مع فايز من فلسطين",
+                    link: "https://www.youtube.com/embed/DWdRUnvK3fY",
+                },
+                {
+                    title: "   مع محمد رأفت من مصر | binary search",
+                    link: "https://www.youtube.com/embed/SKfC1vPeijw",
+                },
+                ///
+                ,
+                {
+                    title: "   مع ألطاف من تونس | Troubleshooting",
+                    link: "https://www.youtube.com/embed/zueQ_Oc9YjU?si=tSDbVaGoJ4YxKwdb",
+                },
+                {
+                    title: " البرمجة  مع سيف من الأردن | Careem Rides",
+                    link: "https://www.youtube.com/embed/8pf5QH2Ob20?si=aUonwp_J2NUbmpyVw",
+                },
+                {
+                    title: "مقابلة تصميم النظم | مع إحسان من السعودية | Design Chat App",
+                    link: "https://www.youtube.com/embed/AoycQJz9d14?si=2RYQv4LSJvlFN6BS",
+                },
+                {
+                    title: "   مع محمد آغا | Command Design Pattern",
+                    link: "https://www.youtube.com/embed/XhLSKBhqKK4?si=rkp0FUjsSU7J21B4",
+                },
+                {
+                    title: "  مع عبدالله أحمد | Recursion",
+                    link: "https://www.youtube.com/embed/Ry2fl3SI4kM?si=MH83V7pRjMoLi3Hl",
+                },
+                {
+                    title: "مقابلة   مع محمد دبساوي | Top Hashtags",
+                    link: "https://www.youtube.com/embed/ubKK8DGyn5M?si=W2wQ2UNp3A8G9VmW",
+                }
+
+            ];
+
+
+
+            // Populate the playlist
+            const playlist = document.getElementById("playlist");
+            const videoPlayer = document.getElementById("videoPlayer");
+            const videoTitle = document.getElementById("videoTitle");
+
+            videos.forEach((video, index) => {
+                const videoItem = document.createElement("div");
+                videoItem.className = "video-item";
+
+                // // Thumbnail
+                // const img = document.createElement("img");
+                // img.src = video.thumbnail;
+                // img.alt = video.title;
+
+                // Title
+                const title = document.createElement("h4");
+                title.textContent = video.title;
+
+                // Add click event to load the video
+                videoItem.onclick = () => {
+                    videoPlayer.src = video.link;
+                    videoTitle.textContent = video.title;
+                };
+
+                videoItem.appendChild(title);
+                // videoItem.appendChild(img);
+
+                playlist.appendChild(videoItem);
+            });
+
+            // Set the first video as default
+            videoPlayer.src = videos[0].link;
+            videoTitle.textContent = videos[0].title;
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu() {
+                sidemenu.style.right = "0px";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-250px";
+            }
+
+        </script>
+        <script>
+            window.addEventListener("scroll", function () {
+                var sidemenu = document.getElementById("sidemenu");
+                var sidemenuTop = sidemenu.offsetTop; // Get the initial top position of the sidemenu
+                var screenWidth = window.innerWidth; // Get the window width
+
+                // Calculate the horizontal center position
+                var sidemenuWidth = sidemenu.offsetWidth;
+                var centerPosition = (screenWidth - sidemenuWidth) / 2;
+
+                if (window.pageYOffset >= sidemenuTop) {
+                    sidemenu.classList.add("fixed"); // Add fixed class when scrolling down
+                    sidemenu.classList.remove("absolute"); // Remove absolute class
+
+                    // Position the sidemenu as fixed and horizontally centered
+                    sidemenu.style.position = "fixed";
+                    sidemenu.style.top = "0"; // Set the top position
+                    // sidemenu.style.left = `${centerPosition}px`; // Center horizontally
+                } else {
+                    sidemenu.classList.add("absolute"); // Add absolute class when returning to top
+                    sidemenu.classList.remove("fixed"); // Remove fixed class
+
+                    // Reset positioning for sidemenu when at the top
+                    sidemenu.style.position = "absolute";
+                    sidemenu.style.top = ""; // Reset to default
+                    sidemenu.style.left = ""; // Reset to default
+                }
+            });
+
+            // // Update the horizontal center position on window resize
+            // window.addEventListener("resize", function () {
+            //     var sidemenu = document.getElementById("sidemenu");
+            //     var screenWidth = window.innerWidth;
+            //     var sidemenuWidth = sidemenu.offsetWidth;
+            //     sidemenu.style.left = `${(screenWidth - sidemenuWidth) / 2}px`;
+            // });
+        </script>
+        <script>
+
+            document.querySelectorAll('.video-item h4').forEach(item => {
+                item.addEventListener('click', () => {
+                    // Remove blue color from all <h4> elements
+                    document.querySelectorAll('.video-item h4').forEach(el => el.style.color = '');
+
+                    // Add blue color to the clicked element
+                    item.style.color = 'blue';
+                });
+            });
+        </script>
+    </body>
+
+
+</html>

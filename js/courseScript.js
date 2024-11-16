@@ -35,10 +35,16 @@ if (dataScript) {
 
 function displayCourseDetails(course) {
     document.getElementById('courseTitle').innerText = course.title;
+
     document.getElementById('course_targetAudience').innerText = course.targetAudience;
     document.getElementById('course_courseLength').innerText = course.courseLength;
     document.getElementById('course_numberOfLectures').innerText = course.numberOfLectures;
     document.getElementById('course_requirements').innerText = course.requirements;
+    // Use querySelector to select the img element with class "course-logo"
+    const courseLogo = document.querySelector('.course-logo');
+    if (courseLogo) {
+        courseLogo.src = course.logo;
+    }
 }
 
 function populatePlaylist(data) {
@@ -56,6 +62,7 @@ function populatePlaylist(data) {
             <span class="lecture-count">Lectures: ${section.sections.length}</span>
             <h4>${section.title}</h4>
         </div>`;
+
 
         const lecturesList = document.createElement('ul');
         lecturesList.classList.add('lectures');
