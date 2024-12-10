@@ -5,13 +5,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Courses</title>
-        <!-- <link rel="stylesheet" href="../css/course.css"> -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+        <link rel="icon" href="../images/tab_footer_icon.png" type="image/x-icon">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+
+
         <style>
             @import url(../css/course.css);
             @import url(../css/sidemenu.css);
             @import url(../css/footer.css);
         </style>
+        <script src="https://kit.fontawesome.com/8b4c251657.js" crossorigin="anonymous"></script>
 
     </head>
 
@@ -75,8 +79,9 @@
         </div>
 
         <script src="../js/footer.js"></script>
+        <script src="../js/reemaFooter.js"></script>
 
-        <p> 2024 @Tariq Elouzeh </p>
+
 
         <script src="../js/courseScript.js"></script>
 
@@ -90,42 +95,18 @@
             }
 
         </script>
+        <script src="../js/scrollingControl.js"> </script>
+
         <script>
-            window.addEventListener("scroll", function () {
-                var sidemenu = document.getElementById("sidemenu");
-                var sidemenuTop = sidemenu.offsetTop; // Get the initial top position of the sidemenu
-                var screenWidth = window.innerWidth; // Get the window width
 
-                // Calculate the horizontal center position
-                var sidemenuWidth = sidemenu.offsetWidth;
-                var centerPosition = (screenWidth - sidemenuWidth) / 2;
+            document.querySelectorAll('.course-playlist ul li').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelectorAll('.course-playllist ul li').forEach(el => el.style.color = '');
 
-                if (window.pageYOffset >= sidemenuTop) {
-                    sidemenu.classList.add("fixed"); // Add fixed class when scrolling down
-                    sidemenu.classList.remove("absolute"); // Remove absolute class
-
-                    // Position the sidemenu as fixed and horizontally centered
-                    sidemenu.style.position = "fixed";
-                    sidemenu.style.top = "0"; // Set the top position
-                    // sidemenu.style.left = `${centerPosition}px`; // Center horizontally
-                } else {
-                    sidemenu.classList.add("absolute"); // Add absolute class when returning to top
-                    sidemenu.classList.remove("fixed"); // Remove fixed class
-
-                    // Reset positioning for sidemenu when at the top
-                    sidemenu.style.position = "absolute";
-                    sidemenu.style.top = ""; // Reset to default
-                    sidemenu.style.left = ""; // Reset to default
-                }
+                    // Add blue color to the clicked element
+                    item.style.color = 'red';
+                });
             });
-
-            // // Update the horizontal center position on window resize
-            // window.addEventListener("resize", function () {
-            //     var sidemenu = document.getElementById("sidemenu");
-            //     var screenWidth = window.innerWidth;
-            //     var sidemenuWidth = sidemenu.offsetWidth;
-            //     sidemenu.style.left = `${(screenWidth - sidemenuWidth) / 2}px`;
-            // });
         </script>
     </body>
 

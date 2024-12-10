@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Tariq Alouza</title>
+        <link rel="icon" href="../images/tab_footer_icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/about.css">
+        <script defer src="../js/about.js"></script>
+        <style>
+            @import url(../css/styless.css);
+            @import url(../css/sidemenu.css);
+            @import url(../css/footer.css);
+        </style>
+        <script src="https://kit.fontawesome.com/8b4c251657.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <script src="../js/sidemenu.js"></script>
+
+        <div class="container" style="
+    padding: 0px;">
+
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="profile-picture">
+                        <img src="../images/channels4_profile.jpg" alt="Tariq Alouza">
+                    </div>
+                    <h1 class="name">Tariq Alouza</h1>
+                    <p class="title">Senior Software Engineer at Apple</p>
+                    <section id="social" class="social">
+                        <div class="social-links">
+
+
+
+                            <a href="https://twitter.com/jordaniandude" target="_blank" target="_blank"
+                                class="social-icon linkedin">Twitter</a>
+                            <a href="https://www.linkedin.com/in/tariqelouzeh/" target="_blank" target="_blank"
+                                class="social-icon linkedin">LinkedIn</a>
+                            <a href="https://www.instagram.com/tariqelouzeh/" target="_blank"
+                                class="social-icon twitter">Twitter</a>
+                            <a href="https://www.youtube.com/@tariqelouzeh" target="_blank" class="social-icon github">
+                                Youtube</a>
+                            <a href="https://open.spotify.com/show/0KXiNLus1U3dAD2GwnMATu" target="_blank"
+                                class="social-icon github">Spotify</a>
+
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I’m Tariq Alouza, a Senior Software Engineer at Apple. With a passion for innovation and
+                    cutting-edge technologies, I’ve contributed to some of the most transformative projects in the tech
+                    industry.
+                    My work focuses on creating scalable software solutions, designing seamless user experiences, and
+                    mentoring future tech leaders.
+                </p>
+            </section>
+            <div class="carousel">
+                <div class="carousel-track" id="carousel-track">
+                </div>
+            </div>
+
+            <script>
+                // Career highlights data
+                const careerHighlights = [
+                    {
+                        title: "Senior Software Automation Engineer",
+                        company: "Apple",
+                        icon: "🍎", // Apple icon
+                        duration: "August 2022 - Present",
+                    },
+                    {
+                        title: "Senior Test Engineer",
+                        company: "Twitter",
+                        icon: "🐦", // Twitter icon
+                        duration: "2019 - 2022",
+                    },
+                    {
+                        title: "Senior Software Engineer",
+                        company: "IBM Turbonomic",
+                        icon: "💻", // Generic tech icon
+                        duration: "2019",
+                    },
+                    {
+                        title: "Soccer Referee",
+                        company: "ZogSports",
+                        icon: "⚽", // Soccer ball icon
+                        duration: "2016 - 2021",
+                    },
+                    {
+                        title: "Instructor",
+                        platform: "Udemy",
+                        icon: "🎓", // Graduation cap icon
+                        duration: "May 2020 - Present",
+                    }
+                ];
+
+                const carouselTrack = document.getElementById("carousel-track");
+
+                // Dynamically generate boxes for career highlights
+                careerHighlights.forEach(highlight => {
+                    const box = document.createElement("div");
+                    box.className = "box";
+                    box.innerHTML = `
+    <div class="icon" style="font-size: 40px;">${highlight.icon}</div>
+    <div class="box-content">
+        <h3>${highlight.title}</h3>
+        <h4>${highlight.company || highlight.platform}</h4>
+        <p>${highlight.duration}</p>
+    </div>
+  `;
+                    carouselTrack.appendChild(box);
+                });
+
+                // Automatic Horizontal Scroll
+                let scrollAmount = 0;
+                const scrollStep = 1; // Adjust the speed
+                const trackWidth = carouselTrack.scrollWidth;
+                const containerWidth = carouselTrack.offsetWidth;
+
+                function autoScroll() {
+                    scrollAmount += scrollStep;
+
+                    if (scrollAmount >= trackWidth - containerWidth) {
+                        scrollAmount = 0; // Reset scroll when it reaches the end
+                    }
+
+                    carouselTrack.style.transform = `translateX(-${scrollAmount}px)`;
+                    requestAnimationFrame(autoScroll);
+                }
+
+                autoScroll();
+            </script>
+
+        </div>
+        <script src="../js/footer.js"></script>
+        <script src="../js/reemaFooter.js"></script>
+
+        <script>
+            function openmenu() {
+                document.getElementById("sidemenu").classList.add("active");
+            }
+
+            function closemenu() {
+                document.getElementById("sidemenu").classList.remove("active");
+            }
+        </script>
+
+        <script src="../js/scrollingControl.js"></script>
+
+    </body>
+
+</html>

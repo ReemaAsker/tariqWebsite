@@ -1,10 +1,10 @@
 // Create footer element
 const footer = document.createElement('footer');
 footer.innerHTML = `
-      <footer>
+
                 <div class="footer-container">
                     <div class="footer-brand">
-                        <img src="../images/tariq3.png" alt="Creator Science Logo">
+                        <img src="../images/tab_footer_icon.png" alt="tariq photo">
                         <!-- Gain insights from Tariq Elouzeh's experiences and expertise, offering valuable advice and knowledge every week. -->
                         <p>Tariq Elouzeh , Professional content creator, expert Technical interviewer, trying and
                             learning
@@ -55,7 +55,7 @@ footer.innerHTML = `
 
                     </div>
                 </div>
-            </footer>
+          
 
  `;
 

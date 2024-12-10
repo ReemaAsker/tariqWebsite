@@ -7,6 +7,7 @@
         <title>Tariq Elouzeh's Website</title>
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+        <link rel="icon" href="../images/tab_footer_icon.png" type="image/x-icon">
 
 
         <style>
@@ -20,10 +21,9 @@
     <body>
         <script src="../js/sidemenu.js"></script>
 
-        <!-- </div> -->
         <div id="header">
 
-            <div class="container">
+            <div class="box-size">
 
                 <div class="header-text">
 
@@ -31,14 +31,13 @@
                     <p>Software Engineer in <span> Apple</span> and <span>YouTuber</span></p>
 
                 </div>
-            </div>
-            <div>
+
             </div>
         </div>
 
         <!-- ................about -->
         <div id="about">
-            <div class="container">
+            <div class="box-size-about">
                 <div class="row">
                     <div class="about-col-1">
                         <img src="../images/channels4_profile.jpg" alt="">
@@ -116,8 +115,8 @@
 
 
         <div id="services">
-            <div class="container">
-                <h1 class="sub-title">My Services</h1>
+            <div class="box-size">
+                <h1 class="sub-tittle-about">My Services</h1>
                 <div class="services-list">
                     <div>
                         <img src="../images/interviews.jpg">
@@ -160,13 +159,12 @@
         </div>
 
         <div id="portfolio">
-            <div class="container">
+            <div class="box-size">
                 <h1 class="sub-tittle-about">My Courses</h1>
                 <div id="work-list" class="work-list"></div>
             </div>
         </div>
         <script src="../js/courses.js"></script>
-
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 renderLastThreeCourses();
@@ -174,20 +172,19 @@
         </script>
 
         <script src="../js/footer.js"></script>
+        <script src="../js/reemaFooter.js"></script>
+
         </div>
         </div>
-        <p> 2024 @developed by Reema Ali Asker_Palestinine_ &#127477; &#127480;</p>
 
 
-
-
-        <script>
+        <!-- <script>
             function toggleTheme() {
                 document.body.classList.toggle('light-mode');
             }
         </script>
 
-
+ -->
 
 
         <script>
@@ -211,74 +208,18 @@
         </script>
 
         <script>
-            var sidemenu = document.getElementById("sidemenu");
             function openmenu() {
-                sidemenu.style.right = "0px";
-            }
-            function closemenu() {
-                sidemenu.style.right = "-500px";
+                document.getElementById("sidemenu").classList.add("active");
             }
 
+            function closemenu() {
+                document.getElementById("sidemenu").classList.remove("active");
+            }
         </script>
 
-        <!DOCTYPE html>
-        <html lang="en">
-
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Tariq Elouzeh's Website</title>
-                <link rel="stylesheet"
-                    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
-                <style>
-                    @import url(../css/styless.css);
-                    @import url(../css/sidemenu.css);
-                    @import url(../css/footer.css);
-                </style>
-                <script src="https://kit.fontawesome.com/8b4c251657.js" crossorigin="anonymous"></script>
-            </head>
+        <script src="../js/scrollingControl.js"></script>
 
 
-
-            <!-- Main content goes here -->
-
-            <script>
-                window.addEventListener("scroll", function () {
-                    var sidemenu = document.getElementById("sidemenu");
-                    var sidemenuTop = sidemenu.offsetTop; // Get the initial top position of the sidemenu
-                    var screenWidth = window.innerWidth; // Get the window width
-
-                    // Calculate the horizontal center position
-                    var sidemenuWidth = sidemenu.offsetWidth;
-                    var centerPosition = (screenWidth - sidemenuWidth) / 2;
-
-                    if (window.pageYOffset >= sidemenuTop) {
-                        sidemenu.classList.add("fixed"); // Add fixed class when scrolling down
-                        sidemenu.classList.remove("absolute"); // Remove absolute class
-
-                        // Position the sidemenu as fixed and horizontally centered
-                        sidemenu.style.position = "fixed";
-                        sidemenu.style.top = "0"; // Set the top position
-                        // sidemenu.style.left = `${centerPosition}px`; // Center horizontally
-                    } else {
-                        sidemenu.classList.add("absolute"); // Add absolute class when returning to top
-                        sidemenu.classList.remove("fixed"); // Remove fixed class
-
-                        // Reset positioning for sidemenu when at the top
-                        sidemenu.style.position = "absolute";
-                        sidemenu.style.top = ""; // Reset to default
-                        sidemenu.style.left = ""; // Reset to default
-                    }
-                });
-
-                // // Update the horizontal center position on window resize
-                // window.addEventListener("resize", function () {
-                //     var sidemenu = document.getElementById("sidemenu");
-                //     var screenWidth = window.innerWidth;
-                //     var sidemenuWidth = sidemenu.offsetWidth;
-                //     sidemenu.style.left = `${(screenWidth - sidemenuWidth) / 2}px`;
-                // });
-            </script>
     </body>
 
 </html>

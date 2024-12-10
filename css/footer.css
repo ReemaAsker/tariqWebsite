@@ -1,12 +1,11 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 footer {
     background-color: #f9f9f9;
-    padding: 40px;
+    padding: 40px 40px 20px 40px;
     color: #333;
 }
 
@@ -83,4 +82,46 @@ footer {
 
 .footer-links a:hover {
     color: var(--link-color);
+}
+
+#reemafooter {
+    background: #353842;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: cursive;
+}
+
+#reemafooter .highlight {
+    color: #b469ff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:660px) {
+    .footer-links {
+        display: grid;
+        gap: 40;
+    }
+
+    #reemafooter {
+        background: #353842;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        font-family: cursive;
+        font-size: 12px;
+    }
+
+    #reemafooter .highlight {
+        color: #b469ff;
+        font-size: 16px;
+        font-weight: bold;
+        font-size: 14px;
+
+    }
+
+    #reemafooter .highlight-1 {
+        display: none;
+    }
 }

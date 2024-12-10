@@ -25,7 +25,6 @@
 
 .course-playlist {
     max-height: 800px;
-    /* Adjust height to fit 6 items */
     overflow-y: auto;
     padding: 10px;
     background-color: #f9f9f9;
@@ -88,3 +87,13 @@
     color: blue;
 }
 
+@media screen and (max-width:1200px) {
+
+
+    /* nav {
+        margin-top: auto;
+
+    } */
+
+
+}
