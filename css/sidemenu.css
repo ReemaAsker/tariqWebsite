@@ -4,7 +4,7 @@
     --hover-text-sidemenu: #e6e6e6;
     --text-colot-nav-li: #fff;
     --link-color: #007bff;
-    --header-background-image: url('../images/Tariq.png');
+    --header-background-image: url('../images/channels4_profile.jpg');
     --logo-image: url('../images/logo-Light.png');
 
     --service-card-background: #f1f1f1;
@@ -28,6 +28,10 @@
     --btn-text-color: #fff;
 }
 
+* {
+    font-family: roboto;
+
+}
 
 #sidemenu {
     position: fixed;
@@ -87,7 +91,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    padding: 9px;
+    /* padding: 9px; */
     border-radius: 20px;
     background-color: var(--hover-text-sidemenu);
 
@@ -225,6 +229,7 @@ ul#sidemenu {
     }
 
     nav {
+        margin-top: 0%;
         display: block;
         width: 100%;
         position: fixed;

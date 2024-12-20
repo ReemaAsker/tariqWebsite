@@ -11,14 +11,14 @@ function applyScrollBehavior() {
 
         if (window.pageYOffset >= sidemenuTop) {
 
-            sidemenu.style.right = "calc(50% - 25%)";
+            sidemenu.style.right = "calc(50% - 20%)";
             sidemenu.classList.add("fixed");
             sidemenu.classList.remove("absolute", "relative");
             sidemenu.style.position = "fixed";
             sidemenu.style.top = "0";
         } else {
 
-            sidemenu.style.right = "calc(-10%)";
+            sidemenu.style.right = "calc(-25%)";
             sidemenu.classList.add("relative");
             sidemenu.classList.remove("fixed", "relative");
             sidemenu.style.position = "relative";

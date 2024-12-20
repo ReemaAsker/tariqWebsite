@@ -28,148 +28,138 @@
                 <div class="header-text">
 
                     <h1>Hi , I'm <span>Tariq</span> </h1>
+                    <div class="column">
+                        <div class="line" style="--c:5px;width:150px"></div>
+                        <div class="line" style="--c:5px;width:250px"></div>
+                    </div>
                     <p>Software Engineer in <span> Apple</span> and <span>YouTuber</span></p>
 
                 </div>
 
+
             </div>
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="profile-picture">
+                        <img src="../images/channels4_profile.jpg" alt="Tariq Alouza">
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
         <!-- ................about -->
-        <div id="about">
-            <div class="box-size-about">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="../images/channels4_profile.jpg" alt="">
-                    </div>
-
-                    <div class="about-col-2">
-                        <h1 class="sub-tittle-about">About Me</h1>
-                        <p>Software engineer and have been working in this field for 15 years. I started working with
-                            ProgressSoft, a financial systems development company in the Middle East. Then I moved to
-                            live in the United States.</p>
-                        <div class="tab-titles">
-
-                            <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-
-
-                        </div>
-                        <!-- skills -->
-
-                        <div class="tab-contents active-tab" id="skills">
-
-                            <ul>
-                                <li><span>Problem Solving</span><br>Solve +500 programming problems
-                                </li>
-                                <li><span>Web development</span>
-                                    <br>Develope websites using html ,css,js
-                                </li>
-                            </ul>
-
-
-                        </div>
-                        <!-- Experience -->
-                        <div class="tab-contents" id="experience">
-
-                            <ul>
-                                <li><span>2022-current</span><br>Software Enginner in <strong>Apple <i
-                                            class="fa-brands fa-apple"></i>
-                                    </strong></li>
-                                </li>
-                                <li><span>2019-2022</span><br>Software Enginner in <strong>Twitter <i
-                                            class="fa-brands fa-x-twitter"></i>
-                                    </strong></li>
-                                </li>
-                                <li><span>2015</span><br>Software Enginner in Terponec Company
-                                </li>
-                                <li><span>2006</span><br>Software Enginner in ProgressSoft Company
-                                </li>
-
-                            </ul>
-
-
-                        </div>
-                        <!-- Education -->
-                        <div class="tab-contents" id="education">
-
-                            <ul>
-                                <li><span>2001-2006</span><br>Bachelor of Software Engineering from Balqa Applied
-                                    University
-                                </li>
-                                <li><span>2007-2010</span>
-                                    <br>MBA from NYIT
-                                </li>
-                            </ul>
-
-
-                        </div>
-                    </div>
-
-                </div>
+        </section>
+        <div class="carousel">
+            <div class="carousel-track" id="carousel-track">
+                <!-- Career highlight items will be dynamically added here -->
             </div>
         </div>
 
-        <!-- services  -->
-
-
-        <div id="services">
-            <div class="box-size">
-                <h1 class="sub-tittle-about">My Services</h1>
-                <div class="services-list">
-                    <div>
-                        <img src="../images/interviews.jpg">
-                        <h2>Coding Interviews</h2>
-                        <p> face to face online (free/paid) ,Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Alias animi, ullam eveniet nostrum
-                            dolore eos dolor omnis cupiditate dolorum tempore aut unde repellendus consequuntur fuga
-                            officiis consectetur saepe sed. Id!</p>
-                        <a href="allCourses.html">Learn more</a>
-
-                    </div>
-
-                    <div>
-
-                        <img src="../images/consultation.jpg">
-
-                        <h2>Cnsultations</h2>
-                        <p>Providing consultations وLorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                            animi, ullam eveniet nostrum
-                            dolore eos dolor omnis cupiditate dolorum tempore aut unde repellendus consequuntur fuga
-                            officiis consectetur saepe sed. Id!</p>
-                        <a href="#">Learn more</a>
-
-                    </div>
-                    <div>
-                        <img src="../images/topics.jpg">
-
-                        <h2>Discussions
-                        </h2>
-                        <p> Useful topics discussions in my Youtube channle Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Alias animi, ullam eveniet nostrum
-                            dolore eos dolor omnis cupiditate dolorum tempore aut unde repellendus consequuntur fuga
-                            officiis consectetur saepe sed. Id!</p>
-                        <a href="#">Learn more</a>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="portfolio">
-            <div class="box-size">
-                <h1 class="sub-tittle-about">My Courses</h1>
-                <div id="work-list" class="work-list"></div>
-            </div>
-        </div>
-        <script src="../js/courses.js"></script>
         <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                renderLastThreeCourses();
+            // Career highlights data
+            const careerHighlights = [
+                {
+                    title: "Senior Software Automation Engineer",
+                    company: "Apple",
+                    icon: "../images/apple.png",
+                    duration: "August 2022 - Present",
+                },
+                {
+                    title: "Senior Test Engineer",
+                    company: "Twitter",
+                    icon: "../images/twitter.png",
+                    duration: "2019 - 2022",
+                },
+                {
+                    title: "Senior Software Engineer",
+                    company: "IBM Turbonomic",
+                    icon: "../images/tur.png",
+                    duration: "2019",
+                },
+                {
+                    title: "Soccer Referee",
+                    company: "ZogSports",
+                    icon: "../images/zog.png",
+                    duration: "2016 - 2021",
+                },
+                {
+                    title: "Instructor",
+                    platform: "Udemy",
+                    icon: "../images/udemy.png",
+                    duration: "May 2020 - Present",
+                },
+            ];
+
+            const carouselTrack = document.getElementById("carousel-track");
+
+            // Dynamically generate boxes for career highlights
+            careerHighlights.forEach((highlight) => {
+                const box = document.createElement("div");
+                box.className = "box";
+                box.innerHTML = `
+                    <div class="icon" style="font-size: 40px;">
+                        <img src="${highlight.icon}" height="100px" width="100px">
+                    </div>
+                    <div class="box-content">
+                        <h3>${highlight.title}</h3>
+                        <h4>${highlight.company || highlight.platform}</h4>
+                        <p>${highlight.duration}</p>
+                    </div>
+                `;
+                carouselTrack.appendChild(box);
             });
+
+            // Duplicate content for infinite looping
+            const scrollContent = Array.from(carouselTrack.children);
+            scrollContent.forEach((item) => {
+                const duplicate = item.cloneNode(true);
+                carouselTrack.appendChild(duplicate);
+            });
+
+            // CSS-based scroll animation
+            carouselTrack.style.display = "flex";
+            carouselTrack.style.width = "max-content";
+            carouselTrack.style.animation = "scroll-left 50s linear infinite";
         </script>
+
+        <style>
+            .carousel {
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                white-space: nowrap;
+            }
+
+            .carousel-track {
+                display: flex;
+            }
+
+            .box {
+                min-width: 200px;
+                margin: 0 10px;
+                text-align: center;
+                padding: 10px;
+                background-color: #f5f5f5;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+
+
+            @keyframes scroll-left {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+        </style>
 
         <script src="../js/footer.js"></script>
         <script src="../js/reemaFooter.js"></script>
@@ -219,7 +209,16 @@
 
         <script src="../js/scrollingControl.js"></script>
 
-
+        <a href="https://www.linkedin.com/in/reema-asker" target="_blank" style="text-decoration: none;
+    color: inherit;     
+  ">
+            <div class="floating-container">
+                <div class="scrolling-row">
+                    <img src="../images/reema_logo.png" alt="Reema" class="profile-image">
+                    <span>ᴍᴀᴅᴇ ʙʏ 𝓡𝓮𝓮𝓶𝓪 𝓐. 𝓐𝓼𝓴𝓮𝓻</span>
+                </div>
+            </div>
+        </a>
     </body>
 
 </html>
