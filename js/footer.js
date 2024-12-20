@@ -1,5 +1,6 @@
 // Create footer element
 const footer = document.createElement('footer');
+
 footer.innerHTML = `
 
                 <div class="footer-container">
