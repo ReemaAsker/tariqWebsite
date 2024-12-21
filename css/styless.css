@@ -317,15 +317,7 @@ form textarea {
     border-radius: 6px;
 }
 
-/* Footer */
-.copyright {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: var(--service-card-background);
-    font-weight: 300;
-    margin-top: 20px;
-}
+
 
 nav .fa-solid {
     display: none;
@@ -368,7 +360,30 @@ nav .fa-solid {
     margin: 0 auto;
 }
 
-/* //////////////////////////////// */
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.carousel-track {
+    display: flex;
+}
+
+
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
 .box {
     flex: 0 0 auto;
@@ -381,10 +396,6 @@ nav .fa-solid {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* .icon {
-    margin-bottom: 15px;
-} */
 
 /* Hero Section */
 .hero {

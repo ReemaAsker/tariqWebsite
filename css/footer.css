@@ -84,18 +84,21 @@ footer {
     color: var(--link-color);
 }
 
+.footer-container {
+    position: relative;
+}
 
-/* Container fixed at bottom-right */
 .floating-container {
-    position: fixed;
+    position: absolute;
     bottom: 10px;
-    right: 10px;
     z-index: 9999;
-    overflow: hidden;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.floating-container :hover {
+    color: purple;
 }
 
 .scrolling-row {
@@ -118,6 +121,8 @@ footer {
         display: grid;
         gap: 40;
     }
+
+
 
 
 }

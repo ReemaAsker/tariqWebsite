@@ -51,115 +51,12 @@
 
         </div>
 
-        <!-- ................about -->
         </section>
         <div class="carousel">
             <div class="carousel-track" id="carousel-track">
-                <!-- Career highlight items will be dynamically added here -->
             </div>
         </div>
-
-        <script>
-            // Career highlights data
-            const careerHighlights = [
-                {
-                    title: "Senior Software Automation Engineer",
-                    company: "Apple",
-                    icon: "../images/apple.png",
-                    duration: "August 2022 - Present",
-                },
-                {
-                    title: "Senior Test Engineer",
-                    company: "Twitter",
-                    icon: "../images/twitter.png",
-                    duration: "2019 - 2022",
-                },
-                {
-                    title: "Senior Software Engineer",
-                    company: "IBM Turbonomic",
-                    icon: "../images/tur.png",
-                    duration: "2019",
-                },
-                {
-                    title: "Soccer Referee",
-                    company: "ZogSports",
-                    icon: "../images/zog.png",
-                    duration: "2016 - 2021",
-                },
-                {
-                    title: "Instructor",
-                    platform: "Udemy",
-                    icon: "../images/udemy.png",
-                    duration: "May 2020 - Present",
-                },
-            ];
-
-            const carouselTrack = document.getElementById("carousel-track");
-
-            // Dynamically generate boxes for career highlights
-            careerHighlights.forEach((highlight) => {
-                const box = document.createElement("div");
-                box.className = "box";
-                box.innerHTML = `
-                    <div class="icon" style="font-size: 40px;">
-                        <img src="${highlight.icon}" height="100px" width="100px">
-                    </div>
-                    <div class="box-content">
-                        <h3>${highlight.title}</h3>
-                        <h4>${highlight.company || highlight.platform}</h4>
-                        <p>${highlight.duration}</p>
-                    </div>
-                `;
-                carouselTrack.appendChild(box);
-            });
-
-            // Duplicate content for infinite looping
-            const scrollContent = Array.from(carouselTrack.children);
-            scrollContent.forEach((item) => {
-                const duplicate = item.cloneNode(true);
-                carouselTrack.appendChild(duplicate);
-            });
-
-            // CSS-based scroll animation
-            carouselTrack.style.display = "flex";
-            carouselTrack.style.width = "max-content";
-            carouselTrack.style.animation = "scroll-left 50s linear infinite";
-        </script>
-
-        <style>
-            .carousel {
-                overflow: hidden;
-                position: relative;
-                width: 100%;
-                white-space: nowrap;
-            }
-
-            .carousel-track {
-                display: flex;
-            }
-
-            .box {
-                min-width: 200px;
-                margin: 0 10px;
-                text-align: center;
-                padding: 10px;
-                background-color: #f5f5f5;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            }
-
-
-
-            @keyframes scroll-left {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(-50%);
-                }
-            }
-        </style>
+        <script src="../js/experience_slidder.js"></script>
 
         <script src="../js/footer.js"></script>
         <script src="../js/reemaFooter.js"></script>
@@ -167,14 +64,6 @@
         </div>
         </div>
 
-
-        <!-- <script>
-            function toggleTheme() {
-                document.body.classList.toggle('light-mode');
-            }
-        </script>
-
- -->
 
 
         <script>
@@ -208,7 +97,6 @@
         </script>
 
         <script src="../js/scrollingControl.js"></script>
-        <script src="../js/reema.js"></script>
 
 
     </body>
