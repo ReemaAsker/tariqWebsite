@@ -9,7 +9,7 @@ const careerHighlights = [
     {
         title: "Senior Test Engineer",
         company: "Twitter",
-        icon: "../images/twitter.png",
+        icon: "../images/x.png",
         duration: "2019 - 2022",
     },
     {
@@ -21,7 +21,7 @@ const careerHighlights = [
     {
         title: "Soccer Referee",
         company: "ZogSports",
-        icon: "../images/zog.png",
+        icon: "../images/zog.jpg",
         duration: "2016 - 2021",
     },
     {

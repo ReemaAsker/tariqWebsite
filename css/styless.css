@@ -493,7 +493,15 @@ nav .fa-solid {
 @media screen and (max-width:900px) {
 
     .hero {
-        display: none;
+        align-items: center;
+        justify-content: center;
+        height: 140%;
+    }
+
+    .profile-picture img {
+        width: 200px;
+        height: 200px;
+
     }
 
     .header-text {
@@ -513,6 +521,7 @@ nav .fa-solid {
 
 @media screen and (max-width:700px) {
 
+
     .column {
         display: none;
     }
@@ -530,7 +539,20 @@ nav .fa-solid {
 
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:550px) {
+
+
+    .header-text h1 {
+        font-size: 40px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .hero {
+        display: none;
+    }
+
     #header {
         height: 60vh;
         width: 100%;
@@ -543,7 +565,7 @@ nav .fa-solid {
 
     .header-text h1 {
         font-size: 40px;
-        margin-top: 55%;
+        margin-top: 52%;
         background: rgb(255, 255, 255, 0.6);
     }
 

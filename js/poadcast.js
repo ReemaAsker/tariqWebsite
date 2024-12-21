@@ -20,7 +20,10 @@ const videos = [
         title: "التكنولوجيا في غزة | المهندسة ريما عسكر",
         link: "https://www.youtube.com/embed/xj_ZBrTvS4k",
     },
-
+    {
+        title: "الفرق بين هندسة وعلم وتحليل البيانات | د. رغد خوالدة",
+        link: "https://www.youtube.com/embed/X928LVRNIrI",
+    },
 
 ];
 
@@ -35,10 +38,6 @@ videos.forEach((video, index) => {
     const videoItem = document.createElement("div");
     videoItem.className = "video-item";
 
-    // // Thumbnail
-    // const img = document.createElement("img");
-    // img.src = video.thumbnail;
-    // img.alt = video.title;
 
     // Title
     const title = document.createElement("h4");
